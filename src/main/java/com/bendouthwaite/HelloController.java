@@ -13,6 +13,6 @@ public class HelloController {
     @CrossOrigin
     @RequestMapping(value = "/hello")
     public List<String> hello() {
-        return Collections.singletonList("hello world");
+        return Collections.singletonList("hello world. Begin update.");
     }
 }
