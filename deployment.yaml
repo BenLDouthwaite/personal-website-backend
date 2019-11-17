@@ -12,9 +12,11 @@ spec:
       labels:
         app: personal-website-api
     spec:
+      terminationGracePeriodSeconds: 30
       containers:
       - name: personal-website-api
-        image: benldouthwaite/base-api:v0.0.10
+        image: benldouthwaite/base-api:latest
+        imagePullPolicy: "Always"
         ports:
         - containerPort: 8081
 ---
