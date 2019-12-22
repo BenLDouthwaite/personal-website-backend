@@ -25,4 +25,9 @@ public class TaskService {
                 .map(task -> new TaskDto(task))
                 .collect(Collectors.toList());
     }
+
+    public void saveTask(TaskDto taskDto) {
+        Task task = new Task(taskDto);
+        taskRepository.save(task);
+    }
 }
