@@ -24,6 +24,11 @@ public class TaskController {
         taskService.saveTask(taskDto);
     }
 
+    @PostMapping(value = "/task/{taskId}")
+    public void doneTask(@PathVariable("taskId") int taskId, @RequestParam(value = "done") boolean done) {
+        taskService.done(taskId, done);
+    }
+
     @DeleteMapping(value = "/task/{taskId}")
     public void deleteTask(@PathVariable("taskId") int taskId) {
         taskService.deleteTask(taskId);

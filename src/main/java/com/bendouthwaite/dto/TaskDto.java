@@ -14,16 +14,17 @@ import javax.persistence.Id;
 @Data
 public class TaskDto {
 
-    @Id
     private Integer id;
 
-    @Column
     private String name;
+
+    private boolean done;
 
     public TaskDto(Task task) {
         this(
             task.getId(),
-            task.getName()
+            task.getName(),
+            task.isDone()
         );
     }
 }

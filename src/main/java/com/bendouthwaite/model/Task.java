@@ -4,6 +4,7 @@ import com.bendouthwaite.dto.TaskDto;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.io.Serializable;
 
@@ -12,6 +13,7 @@ import javax.persistence.*;
 @Entity
 @Table(name = "task")
 @Getter
+@Setter
 @AllArgsConstructor
 @NoArgsConstructor
 public class Task implements Serializable{
@@ -23,10 +25,14 @@ public class Task implements Serializable{
     @Column
     private String name;
 
+    @Column
+    private boolean done;
+
     public Task(TaskDto taskDto) {
         this(
                 taskDto.getId(),
-                taskDto.getName()
+                taskDto.getName(),
+                taskDto.isDone()
         );
     }
 }

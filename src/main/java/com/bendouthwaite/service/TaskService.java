@@ -34,4 +34,10 @@ public class TaskService {
     public void deleteTask(int taskId) {
         taskRepository.deleteById(taskId);
     }
+
+    public void done(int taskId, boolean done) {
+        Task task = taskRepository.getOne(taskId);
+        task.setDone(done);
+        taskRepository.save(task);
+    }
 }
