@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.bendouthwaite.com</groupId>
-    <artifactId>personal-website-frontend</artifactId>
+    <artifactId>personal-website-backend</artifactId>
     <version>0.0.1-SNAPSHOT</version>
 
     <parent>
